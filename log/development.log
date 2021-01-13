@@ -40,3 +40,92 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title Goes Here"], ["description", "The best post ever"], ["created_at", "2021-01-13 01:50:20.970708"], ["updated_at", "2021-01-13 01:50:20.970708"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/posts/new" for ::1 at 2021-01-12 18:55:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 375ms (Views: 363.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2021-01-12 18:56:12 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uz3Ow5T7hhwd7gJPG0mlaZ6uFZanEuv+3xhfUV1+gIFMUrc5+ZEAYY2arPMW9lpOqR+Lx5TxRVdfVF7ZC1x7kg==", "title"=>"Software", "description"=>"Software is awesome!", "commit"=>"Submit Post"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software"], ["description", "Software is awesome!"], ["created_at", "2021-01-13 01:56:12.458807"], ["updated_at", "2021-01-13 01:56:12.458807"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 37ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-01-12 18:57:00 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-01-12 18:57:01 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-01-12 18:57:26 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KpKYhb9Lrdl6jmDD8rjGp3UwpCd6EJU7C+MLl+VqOgU1/eF/0iErpOr6zn//BzmAQoE6dknzO5KLrwofs0jBFg==", "title"=>"Software", "description"=>"Is awesome", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software"], ["description", "Is awesome"], ["created_at", "2021-01-13 01:57:26.727364"], ["updated_at", "2021-01-13 01:57:26.727364"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-01-12 19:23:43 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-01-12 19:23:53 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qJ1ldIUNNTTU48QemfmE3m3usoHUHBPlplRRvWKuLam38hyO6GezSUSXaqKURnv5Wl8s0Of/vUwmGFA1NIzWug==", "title"=>"Software Engineering Student ", "description"=>"Hello", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software Engineering Student "], ["description", "Hello"], ["created_at", "2021-01-13 02:23:53.534694"], ["updated_at", "2021-01-13 02:23:53.534694"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 1.2ms)
+
+
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/posts/new" for ::1 at 2021-01-12 19:28:14 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for ::1 at 2021-01-12 19:28:21 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QsHzRYi8ftqH25AIVnJ4fpThmXNfhVN3nq44eAjZLV5droq/5db4pxevPrRbzYdZo1AHImxm/d4e4jnwXvvWTQ==", "title"=>"Software", "description"=>"Hello", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software"], ["description", "Hello"], ["created_at", "2021-01-13 02:28:21.664345"], ["updated_at", "2021-01-13 02:28:21.664345"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/6" for ::1 at 2021-01-12 19:28:21 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
